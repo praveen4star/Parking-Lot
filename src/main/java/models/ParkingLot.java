@@ -1,8 +1,8 @@
 package models;
 
-import models.constants.FeeCalculationStrategy;
+import service.strategy.feeCalculationStrategy.FeeCalculationStrategy;
 import models.constants.ParkingLotStatus;
-import models.constants.ParkingSlotAllocationStrategy;
+import service.strategy.slotAllocationStrategy.ParkingSlotAllocationStrategy;
 import models.constants.VehicleType;
 
 import java.util.List;
@@ -13,6 +13,6 @@ public class ParkingLot extends BaseModel {
     private ParkingLotStatus status;
     private List<ParkingFloor> parkingFloors;
     private List<VehicleType> allowedVehicleTypes;
-    private List<ParkingSlotAllocationStrategy> parkingSlotAllocationStrategies;
-    private List<FeeCalculationStrategy>    feeCalculationStrategies;
+    private ParkingSlotAllocationStrategy parkingSlotAllocationStrategy;
+    private FeeCalculationStrategy   feeCalculationStrategy;
 }
