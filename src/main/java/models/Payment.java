@@ -1,8 +1,11 @@
 package models;
 
+import models.constants.PaymentMode;
+import models.constants.PaymentStatus;
+
 import java.util.Date;
 
-public class Payment {
+public class Payment extends BaseModel {
     private String transactionId;
     private double amount;
     private PaymentStatus status;

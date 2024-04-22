@@ -1,6 +1,8 @@
 package models;
 
-public class Vehicle {
+import models.constants.VehicleType;
+
+public class Vehicle extends BaseModel {
     private String model;
     private VehicleType type;
     private String number;
