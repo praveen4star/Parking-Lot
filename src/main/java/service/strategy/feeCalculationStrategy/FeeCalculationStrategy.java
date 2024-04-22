@@ -2,6 +2,10 @@ package service.strategy.feeCalculationStrategy;
 
 import models.Ticket;
 
+import java.time.LocalDateTime;
+
 public interface FeeCalculationStrategy {
-    public double calculateFee(Ticket ticket, long durationInMinutes);
+    double calculateFee(Ticket ticket, LocalDateTime exitTime);
+
+
 }

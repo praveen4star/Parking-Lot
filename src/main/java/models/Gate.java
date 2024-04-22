@@ -5,7 +5,7 @@ import models.constants.GateType;
 
 public class Gate extends BaseModel {
     private GateType type;
-    private Operator operator;
+    private String operator;
     private GateStatus status;
 
 }

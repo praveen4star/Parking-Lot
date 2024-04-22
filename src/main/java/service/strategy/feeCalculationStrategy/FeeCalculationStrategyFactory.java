@@ -1,2 +1,7 @@
-package service.strategy.feeCalculationStrategy;public class FeeCalculationStrategyFactory {
+package service.strategy.feeCalculationStrategy;
+
+public class FeeCalculationStrategyFactory {
+    public static FeeCalculationStrategy getFeeCalculationStrategy() {
+        return new LowFeeCalculationStrategy();
+    }
 }

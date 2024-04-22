@@ -8,4 +8,7 @@ public class Vehicle extends BaseModel {
     private String number;
     private String color;
 
+    public VehicleType getType() {
+        return type;
+    }
 }
