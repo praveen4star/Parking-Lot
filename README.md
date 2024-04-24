@@ -22,3 +22,6 @@ This repository contains a simple implementation of a Parking Lot Management Sys
     - configurable based on the vehicleType, number of hour,
     - Vehicle will assigned to a slot based on slot's vehicleType of slow 
 
+## Clas Diagram
+
+![Class Entity Diagram](parking_lot.png)
