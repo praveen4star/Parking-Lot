@@ -9,4 +9,8 @@ public class ParkingFloor extends BaseModel {
     private List<Gate> gates;
     private List<ParkingSlot> parkingSlots;
     private ParkingFloorStatus status;
+
+    public List<ParkingSlot> getParkingSlots() {
+        return parkingSlots;
+    }
 }

@@ -15,4 +15,12 @@ public class ParkingLot extends BaseModel {
     private List<VehicleType> allowedVehicleTypes;
     private ParkingSlotAllocationStrategy parkingSlotAllocationStrategy;
     private FeeCalculationStrategy   feeCalculationStrategy;
+
+    public List<ParkingFloor> getParkingFloors() {
+        return parkingFloors;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

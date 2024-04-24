@@ -8,4 +8,16 @@ public class ParkingSlot extends BaseModel {
     private VehicleType vehicleType;
     private Vehicle vehicle;
     private ParkingSlotStatus status;
+
+    public int getSlotNumber() {
+        return slotNumber;
+    }
+
+    public VehicleType getVehicleType() {
+        return vehicleType;
+    }
+
+    public ParkingSlotStatus getStatus() {
+        return status;
+    }
 }
