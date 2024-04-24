@@ -9,6 +9,7 @@ public abstract class BaseModel {
     private String createdBy;
     private String updatedBy;
 
+
     public int getId() {
         return id;
     }
@@ -27,5 +28,9 @@ public abstract class BaseModel {
 
     public String getUpdatedBy() {
         return updatedBy;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

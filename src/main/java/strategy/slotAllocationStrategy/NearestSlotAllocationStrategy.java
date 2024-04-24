@@ -1,4 +1,4 @@
-package service.strategy.slotAllocationStrategy;
+package strategy.slotAllocationStrategy;
 
 import exceptions.ParkingSlotNotUnavailable;
 import models.*;
@@ -7,6 +7,9 @@ import models.constants.ParkingSlotStatus;
 import java.util.List;
 
 public class NearestSlotAllocationStrategy implements ParkingSlotAllocationStrategy{
+    public NearestSlotAllocationStrategy() {
+        System.out.println("NearestSlotAllocationStrategy");
+    }
     @Override
     public ParkingSlot getParkingSlot(Vehicle vehicle, ParkingLot parkingLot, Gate entryGate) throws ParkingSlotNotUnavailable {
         List<ParkingFloor> parkingFloors = parkingLot.getParkingFloors();

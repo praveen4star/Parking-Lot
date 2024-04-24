@@ -1,4 +1,4 @@
-package service.strategy.slotAllocationStrategy;
+package strategy.slotAllocationStrategy;
 
 import exceptions.ParkingSlotNotUnavailable;
 import models.Gate;

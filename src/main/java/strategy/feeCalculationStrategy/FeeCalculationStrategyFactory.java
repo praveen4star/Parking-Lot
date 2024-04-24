@@ -1,4 +1,4 @@
-package service.strategy.feeCalculationStrategy;
+package strategy.feeCalculationStrategy;
 
 public class FeeCalculationStrategyFactory {
     public static FeeCalculationStrategy getFeeCalculationStrategy() {

@@ -1,4 +1,4 @@
-package service.strategy.feeCalculationStrategy;
+package strategy.feeCalculationStrategy;
 
 import models.Ticket;
 import models.constants.VehicleType;

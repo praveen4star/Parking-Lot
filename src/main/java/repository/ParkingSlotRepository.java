@@ -8,6 +8,7 @@ import java.util.Map;
 
 public class ParkingSlotRepository {
     private Map<Integer, ParkingSlot> parkingSlotMap;
+    private static ParkingSlotRepository instance;
     public ParkingSlotRepository(){
         parkingSlotMap = new HashMap<>();
 
@@ -22,5 +23,11 @@ public class ParkingSlotRepository {
         parkingSlotMap.put(parkingSlot.getId(), parkingSlot);
     }
 
+    public static ParkingSlotRepository getInstance(){
+        if(instance == null){
+            instance = new ParkingSlotRepository();
+        }
+        return instance;
+    }
 
 }
