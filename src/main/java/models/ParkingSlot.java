@@ -7,6 +7,11 @@ public class ParkingSlot extends BaseModel {
     private int slotNumber;
     private VehicleType vehicleType;
     private Vehicle vehicle;
+
+    public void setStatus(ParkingSlotStatus status) {
+        this.status = status;
+    }
+
     private ParkingSlotStatus status;
 
     public ParkingSlot(int id, VehicleType vehicleType, int slotNumber, ParkingSlotStatus status){

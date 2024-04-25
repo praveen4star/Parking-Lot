@@ -17,4 +17,8 @@ public class Vehicle extends BaseModel {
     public VehicleType getType() {
         return type;
     }
+
+    public String getNumber() {
+        return number;
+    }
 }

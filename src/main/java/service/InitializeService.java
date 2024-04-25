@@ -1,14 +1,8 @@
 package service;
 
-import models.Gate;
-import models.ParkingFloor;
-import models.ParkingLot;
-import models.ParkingSlot;
+import models.*;
 import models.constants.*;
-import repository.GateRepository;
-import repository.ParkingFloorRepository;
-import repository.ParkingLotRepository;
-import repository.ParkingSlotRepository;
+import repository.*;
 import strategy.feeCalculationStrategy.FeeCalculationStrategyFactory;
 import strategy.slotAllocationStrategy.ParkingSlotAllocationStrategyFactory;
 import strategy.slotAllocationStrategy.ParkingSlotAllocationStrategyType;
@@ -21,11 +15,13 @@ public class InitializeService {
     private ParkingSlotRepository parkingSlotRepository;
     private ParkingFloorRepository parkingFloorRepository;
     private ParkingLotRepository parkingLotRepository;
+    private VehicleRepository vehicleRepository;
     public InitializeService() {
         gateRepository = GateRepository.getInstance();
         parkingSlotRepository = ParkingSlotRepository.getInstance();
         parkingFloorRepository = ParkingFloorRepository.getInstance();
         parkingLotRepository = ParkingLotRepository.getInstance();
+        vehicleRepository = VehicleRepository.getInstance();
 
     }
     public ParkingLot initializeParkingLot() {
@@ -70,5 +66,10 @@ public class InitializeService {
         System.out.println("Parking Lot initialized");
         parkingLotRepository.addParkingLot(parkingLot);
         return parkingLot;
+    }
+    public Vehicle getVehicle(){
+        Vehicle vehicle = new Vehicle(1, "KA-01-HH-1234", "White", "Toyota", VehicleType.FOUR_WHEELER);
+        vehicleRepository.put(vehicle);
+        return vehicle;
     }
 }
