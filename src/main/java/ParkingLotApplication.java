@@ -1,4 +1,7 @@
+import controller.BillController;
 import controller.TicketController;
+import dtos.BillRequestDto;
+import dtos.BillResponseDto;
 import dtos.TicketRequestDto;
 import dtos.TicketResponseDto;
 import exceptions.GateNotFound;
@@ -37,6 +40,19 @@ public class ParkingLotApplication {
         else{
             System.out.println("Ticket generated successfully : "+ticketResponseDto.getTicket().getId());
         }
-
+        /** bill generation **/
+        BillController billController = new BillController();
+        BillRequestDto billRequestDto = new BillRequestDto();
+        billRequestDto.setTicketId(ticketResponseDto.getTicket().getId());
+        billRequestDto.setParkingLotId(parkingLot.getId());
+        billRequestDto.setGateId(112);
+        billRequestDto.setExitTime(LocalDateTime.now().plusHours(1));
+        BillResponseDto billResponseDto = billController.generateBill(billRequestDto);
+        if(billResponseDto.getStatus().equals(ResponseStatus.FAILURE)){
+            System.out.println("Bill generation failed : "+billResponseDto.getMesssage());
+        }
+        else{
+            System.out.println("Bill generated successfully : "+billResponseDto.getBill().getAmount());
+        }
     }
 }
